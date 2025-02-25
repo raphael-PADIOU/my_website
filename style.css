@@ -126,19 +126,60 @@ h2 {
 }
 
 /* Articles */
+.article-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
 .article-item {
-    margin-bottom: 20px;
+    margin: 10px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s;
+    width: 300px;
+    flex: 1;
+    background: var(--background-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 250px; /* Set a minimum height for all items */
+}
+
+.article-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 .article-title {
     font-size: 1.2em;
+    font-weight: bold;
+    color: var(--secondary-color);
 }
 
 .article-description {
     font-size: 0.9em;
     font-style: italic;
     color: #666;
-    margin-top: 5px;
+    margin-top: 10px;
+}
+
+.form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.form-group label {
+    font-weight: bold;
+    color: var(--secondary-color);
+}
+
+.form-group span {
+    color: var(--text-color);
 }
 
 /* Liens */
@@ -163,54 +204,6 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Widgets */
-.widget-container {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
-}
-
-.widget {
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 150px;
-    flex: 1;
-    background: var(--background-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    min-height: 200px; /* Set a minimum height for all widgets */
-}
-
-.widget:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--primary-color);
-}
-
-.widget a {
-    text-decoration: none;
-    color: inherit;
-}
-
-.widget-icon {
-    max-width: 100%;
-    max-height: 100px;
-    margin-bottom: 10px;
-    object-fit: contain; /* Ensure the image fits within the container without distortion */
-}
-
-.widget p {
-    margin: 0;
-    font-size: 1.2em;
-    color: var(--text-color);
-}
-
 /* Connect Section */
 #connect {
     background: var(--background-color);
@@ -219,43 +212,25 @@ a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     max-width: 800px;
-    text-align: center;
+    text-align: left;
     animation: fadeIn 1.5s ease-in-out;
 }
 
 .connect-container {
     display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    margin-top: 20px;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .connect-item {
-    margin: 10px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-    width: 150px;
-    flex: 1;
-    background: var(--background-color);
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
-    flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    min-height: 200px; /* Set a minimum height for all items */
-}
-
-.connect-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 20px var(--primary-color);
+    gap: 10px;
 }
 
 .connect-icon {
-    max-width: 100%;
-    max-height: 100px;
-    margin-bottom: 10px;
+    width: 40px;
+    height: 40px;
     object-fit: contain; /* Ensure the image fits within the container without distortion */
 }
 
