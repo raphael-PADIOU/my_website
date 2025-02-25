@@ -5,7 +5,6 @@ body {
     color: #333;
     margin: 0;
     padding: 0;
-    text-align: center;
     scroll-behavior: smooth;
 }
 
@@ -20,15 +19,30 @@ body {
 
 /* En-tête */
 header {
-    background: linear-gradient(135deg, #6B73FF 0%, #000DFF 100%);
+    position: relative;
+    background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
     color: white;
     padding: 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 .header-content {
+    position: relative;
+    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
+}
+
+header::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    z-index: 1;
 }
 
 header h1 {
@@ -45,8 +59,7 @@ header p {
 
 .contact-info {
     display: flex;
-    justify-content: center;
-    gap: 20px;
+    justify-content: space-around;
     flex-wrap: wrap;
 }
 
@@ -85,6 +98,7 @@ header a:hover {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     max-width: 800px;
+    text-align: left;
     animation: slideIn 1s ease-in-out;
 }
 
@@ -103,6 +117,7 @@ main {
     max-width: 800px;
     margin: 30px auto;
     padding: 20px;
+    text-align: left;
 }
 
 /* Sections Articles & Projets */
@@ -143,6 +158,18 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Widgets */
+.widget-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+.widget {
+    margin: 10px;
+}
+
 /* Footer */
 footer {
     background: #333;
@@ -153,6 +180,7 @@ footer {
     width: 100%;
     bottom: 0;
     box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
 }
 
 /* Animations */
