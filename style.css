@@ -13,51 +13,6 @@ body {
 
 .top-bar {
     background-color: var(--primary-color);
-}
-
-header {
-    background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
-    color: var(--text-color);
-}
-
-header::before {
-    background: rgba(0, 0, 0, 0.7); /* Darker overlay */
-}
-
-header h1 {
-    color: var(--text-color);
-}
-
-header a, .contact-info a, #about a, a {
-    color: var(--secondary-color);
-}
-
-header a:hover, .contact-info a:hover, #about a:hover, a:hover {
-    color: var(--accent-color);
-}
-
-#about {
-    background: var(--background-color);
-    color: var(--text-color);
-}
-
-h2 {
-    color: var(--primary-color);
-}
-
-/* Style global */
-body {
-    font-family: 'Roboto', sans-serif;
-    background-color: var(--background-color);
-    color: var(--text-color);
-    margin: 0;
-    padding: 0;
-    scroll-behavior: smooth;
-}
-
-/* Barre de couleur en haut */
-.top-bar {
-    background-color: var(--primary-color);
     color: var(--text-color);
     padding: 10px 0;
     width: 100%;
@@ -66,7 +21,6 @@ body {
     font-size: 1.1em;
 }
 
-/* En-tête */
 header {
     position: relative;
     background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
@@ -106,37 +60,12 @@ header p {
     font-size: 1.5em;
 }
 
-.contact-info {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.contact-info p {
-    margin: 0;
-    font-size: 0.9em;
-}
-
-.contact-info a {
+header a, .contact-info a, #about a, a {
     color: var(--secondary-color);
-    text-decoration: none;
-    transition: color 0.3s;
 }
 
-.contact-info a:hover {
+header a:hover, .contact-info a:hover, #about a:hover, a:hover {
     color: var(--accent-color);
-    text-decoration: underline;
-}
-
-header a {
-    color: var(--secondary-color);
-    text-decoration: none;
-    transition: color 0.3s;
-}
-
-header a:hover {
-    color: var(--accent-color);
-    text-decoration: underline;
 }
 
 /* Section About */
@@ -315,14 +244,5 @@ footer {
     to {
         transform: translateY(0);
         opacity: 1;
-    }
-}
-
-@keyframes neonGlow {
-    from {
-        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc;
-    }
-    to {
-        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
     }
 }
