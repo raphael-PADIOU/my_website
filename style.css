@@ -53,9 +53,9 @@ footer {
 
 /* Style global */
 body {
-    font-family: 'Open Sans', sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: 'Roboto', sans-serif;
+    background-color: #0d0d0d;
+    color: #e6e6e6;
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -63,11 +63,13 @@ body {
 
 /* Barre de couleur en haut */
 .top-bar {
-    background-color: #000;
-    color: white;
+    background-color: #1a1a1a;
+    color: #00ffcc;
     padding: 10px 0;
     width: 100%;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    font-size: 1.1em;
 }
 
 /* En-tête */
@@ -75,8 +77,8 @@ header {
     position: relative;
     background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
     color: white;
-    padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 40px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
@@ -94,20 +96,20 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
     z-index: 1;
 }
 
 header h1 {
     margin: 0;
-    font-size: 2.5em;
+    font-size: 3em;
     font-family: 'Roboto', sans-serif;
-    animation: fadeIn 2s ease-in-out;
+    animation: neonGlow 2s ease-in-out infinite alternate;
 }
 
 header p {
-    margin: 5px 0;
-    font-size: 1.2em;
+    margin: 10px 0;
+    font-size: 1.5em;
 }
 
 .contact-info {
@@ -145,28 +147,28 @@ header a:hover {
 
 /* Section About */
 #about {
-    background: #fff;
+    background: #1a1a1a;
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     max-width: 800px;
     text-align: left;
     animation: slideIn 1s ease-in-out;
 }
 
 #about h2 {
-    font-size: 2em;
-    color: #007BFF;
+    font-size: 2.5em;
+    color: #00ffcc;
 }
 
 #about p {
-    font-size: 1.1em;
+    font-size: 1.2em;
     line-height: 1.6;
 }
 
 #about a {
-    color: #007BFF;
+    color: #00ffcc;
     text-decoration: none;
 }
 
@@ -184,18 +186,18 @@ main {
 
 /* Sections Articles & Projets */
 section {
-    background: white;
+    background: #1a1a1a;
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     animation: fadeIn 1.5s ease-in-out;
 }
 
 h2 {
-    color: #007BFF;
+    color: #00ffcc;
     margin-bottom: 20px;
-    font-size: 2em;
+    font-size: 2.5em;
 }
 
 /* Liens */
@@ -206,17 +208,17 @@ ul {
 
 li {
     margin: 10px 0;
-    font-size: 1.1em;
+    font-size: 1.2em;
 }
 
 a {
-    color: #007BFF;
+    color: #00ffcc;
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #FF4500;
+    color: #ff00ff;
     text-decoration: underline;
 }
 
@@ -231,12 +233,18 @@ a:hover {
 .widget {
     margin: 10px;
     text-align: center;
-    transition: transform 0.3s;
+    transition: transform 0.3s, box-shadow 0.3s;
     width: 150px;
+    flex: 1;
+    background: #1a1a1a;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .widget:hover {
     transform: scale(1.05);
+    box-shadow: 0 0 20px #00ffcc;
 }
 
 .widget a {
@@ -252,20 +260,20 @@ a:hover {
 
 .widget p {
     margin: 0;
-    font-size: 1em;
-    color: #333;
+    font-size: 1.2em;
+    color: #e6e6e6;
 }
 
 /* Footer */
 footer {
-    background: #333;
-    color: white;
+    background: #1a1a1a;
+    color: #00ffcc;
     padding: 10px;
-    font-size: 0.9em;
+    font-size: 1em;
     position: fixed;
     width: 100%;
     bottom: 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
 
@@ -287,5 +295,14 @@ footer {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+@keyframes neonGlow {
+    from {
+        text-shadow: 0 0 10px #00ffcc, 0 0 20px #00ffcc, 0 0 30px #00ffcc, 0 0 40px #00ffcc, 0 0 50px #00ffcc, 0 0 60px #00ffcc, 0 0 70px #00ffcc;
+    }
+    to {
+        text-shadow: 0 0 20px #ff00ff, 0 0 30px #ff00ff, 0 0 40px #ff00ff, 0 0 50px #ff00ff, 0 0 60px #ff00ff, 0 0 70px #ff00ff, 0 0 80px #ff00ff;
     }
 }
