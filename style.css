@@ -112,6 +112,15 @@ header a:hover {
     line-height: 1.6;
 }
 
+#about a {
+    color: #007BFF;
+    text-decoration: none;
+}
+
+#about a:hover {
+    text-decoration: underline;
+}
+
 /* Sections principales */
 main {
     max-width: 800px;
@@ -168,6 +177,30 @@ a:hover {
 
 .widget {
     margin: 10px;
+    text-align: center;
+    transition: transform 0.3s;
+    width: 150px;
+}
+
+.widget:hover {
+    transform: scale(1.05);
+}
+
+.widget a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.widget-icon {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.widget p {
+    margin: 0;
+    font-size: 1em;
+    color: #333;
 }
 
 /* Footer */
