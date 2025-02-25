@@ -1,8 +1,8 @@
 :root {
-    --primary-color: #00FF00; /* Neon Green */
-    --secondary-color: #00FFFF; /* Cyan */
-    --background-color: #000000; /* Black */
-    --text-color: #FFFFFF; /* White */
+    --primary-color: #00BFFF; /* Light Blue */
+    --secondary-color: #0000FF; /* Blue */
+    --background-color: #FFFFFF; /* White */
+    --text-color: #000000; /* Black */
     --accent-color: #FF00FF; /* Magenta */
 }
 
@@ -25,7 +25,7 @@ header::before {
 }
 
 header h1 {
-    color: var(--accent-color);
+    color: var(--text-color);
 }
 
 header a, .contact-info a, #about a, a {
@@ -45,17 +45,11 @@ h2 {
     color: var(--primary-color);
 }
 
-footer {
-    background: var(--primary-color);
-}
-
-
-
 /* Style global */
 body {
     font-family: 'Roboto', sans-serif;
-    background-color: #0d0d0d;
-    color: #e6e6e6;
+    background-color: var(--background-color);
+    color: var(--text-color);
     margin: 0;
     padding: 0;
     scroll-behavior: smooth;
@@ -63,8 +57,8 @@ body {
 
 /* Barre de couleur en haut */
 .top-bar {
-    background-color: #1a1a1a;
-    color: #00ffcc;
+    background-color: var(--primary-color);
+    color: var(--text-color);
     padding: 10px 0;
     width: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -76,7 +70,7 @@ body {
 header {
     position: relative;
     background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
-    color: white;
+    color: var(--text-color);
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
@@ -104,8 +98,7 @@ header h1 {
     margin: 0;
     font-size: 3em;
     font-family: 'Roboto', sans-serif;
-    color: white;
-    animation: neonGlow 2s ease-in-out infinite alternate;
+    color: var(--background-color);
 }
 
 header p {
@@ -125,30 +118,30 @@ header p {
 }
 
 .contact-info a {
-    color: #FFD700;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 .contact-info a:hover {
-    color: #FF4500;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
 header a {
-    color: #FFD700;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 header a:hover {
-    color: #FF4500;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
 /* Section About */
 #about {
-    background: #1a1a1a;
+    background: var(--background-color);
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
@@ -160,17 +153,17 @@ header a:hover {
 
 #about h2 {
     font-size: 2.5em;
-    color: #00ffcc;
+    color: var(--primary-color);
 }
 
 #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #e6e6e6;
+    color: var(--text-color);
 }
 
 #about a {
-    color: #00ffcc;
+    color: var(--secondary-color);
     text-decoration: none;
 }
 
@@ -188,7 +181,7 @@ main {
 
 /* Sections Articles & Projets */
 section {
-    background: #1a1a1a;
+    background: var(--background-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -197,9 +190,29 @@ section {
 }
 
 h2 {
-    color: #00ffcc;
+    color: var(--primary-color);
     margin-bottom: 20px;
     font-size: 2.5em;
+}
+
+/* Articles */
+.article-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.article-title {
+    flex: 1;
+}
+
+.article-description {
+    flex: 1;
+    font-size: 0.9em;
+    font-style: italic;
+    color: #666;
+    margin-left: 20px;
 }
 
 /* Liens */
@@ -214,13 +227,13 @@ li {
 }
 
 a {
-    color: #00ffcc;
+    color: var(--secondary-color);
     text-decoration: none;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #ff00ff;
+    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -238,15 +251,20 @@ a:hover {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 150px;
     flex: 1;
-    background: #1a1a1a;
+    background: var(--background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px; /* Set a minimum height for all widgets */
 }
 
 .widget:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 20px #00ffcc;
+    box-shadow: 0 0 20px var(--primary-color);
 }
 
 .widget a {
@@ -263,13 +281,13 @@ a:hover {
 .widget p {
     margin: 0;
     font-size: 1.2em;
-    color: #e6e6e6;
+    color: var(--text-color);
 }
 
 /* Footer */
 footer {
-    background: #1a1a1a;
-    color: #00ffcc;
+    background: var(--primary-color);
+    color: var(--text-color);
     padding: 10px;
     font-size: 1em;
     position: fixed;
