@@ -63,7 +63,7 @@ body {
 
 header {
     position: relative;
-    background: url('IMG_0033.jpeg') no-repeat center center/cover;
+    background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
     color: var(--text-color);
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -84,7 +84,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
+    background: rgba(0, 0, 0, 0.3); /* Adjusted semi-transparent overlay */
     z-index: 1;
 }
 
@@ -92,13 +92,13 @@ header h1 {
     margin: 0;
     font-size: 3em;
     font-family: 'Montserrat', sans-serif;
-    color: var(--background-color);
+    color: var(--text-color); /* Ensure the text is white */
 }
 
 header p {
     margin: 10px 0;
     font-size: 1.5em;
-    color: var(--background-color); /* Ensure the text is white */
+    color: var(--text-color); /* Ensure the text is white */
 }
 
 header a, .contact-info a, #about a, a {
@@ -123,13 +123,13 @@ header a:hover, .contact-info a:hover, #about a:hover, a:hover {
 
 #about h2 {
     font-size: 2.5em;
-    color: var(--primary-color);
+    color: var(--text-color); /* Ensure the text is white */
 }
 
 #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ensure the text is black */
 }
 
 #about a {
@@ -160,7 +160,7 @@ section {
 }
 
 h2 {
-    color: var(--primary-color);
+    color: var(--text-color); /* Ensure the text is white */
     margin-bottom: 20px;
     font-size: 2.5em;
 }
@@ -197,13 +197,13 @@ h2 {
 .article-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ensure the text is black */
 }
 
 .article-description {
     font-size: 0.9em;
     font-style: italic;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ensure the text is black */
     margin-top: 10px;
 }
 
@@ -215,11 +215,11 @@ h2 {
 
 .form-group label {
     font-weight: bold;
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ensure the text is black */
 }
 
 .form-group span {
-    color: var(--primary-color);
+    color: var(--primary-color); /* Ensure the text is black */
 }
 
 /* Liens */
