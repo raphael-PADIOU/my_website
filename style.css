@@ -85,7 +85,7 @@ header::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3); /* Adjusted semi-transparent overlay */
+    background: rgba(0, 0, 0, 0); /* Removed semi-transparent overlay */
     z-index: 1;
 }
 
@@ -124,7 +124,7 @@ header a:hover, .contact-info a:hover, #about a:hover, a:hover {
 
 #about h2 {
     font-size: 2.5em;
-    color: var(--header-text-color); /* Ensure the text is white */
+    color: var(--text-color); /* Ensure the text is black */
 }
 
 #about p {
@@ -161,7 +161,7 @@ section {
 }
 
 h2 {
-    color: var(--header-text-color); /* Ensure the text is white */
+    color: var(--text-color); /* Ensure the text is black */
     margin-bottom: 20px;
     font-size: 2.5em;
 }
@@ -188,6 +188,8 @@ h2 {
     align-items: center;
     justify-content: space-between;
     min-height: 250px; /* Set a minimum height for all items */
+    overflow: hidden; /* Ensure content doesn't overflow */
+    position: relative; /* For positioning child elements */
 }
 
 .article-item:hover {
@@ -196,16 +198,28 @@ h2 {
 }
 
 .article-title {
-    font-size: 1.2em;
+    font-size: 1.5em;
     font-weight: bold;
-    color: var(--text-color); /* Ensure the text is black */
+    color: var(--primary-color); /* Dark Gray */
+    margin-bottom: 10px;
+}
+
+.article-title a {
+    color: var(--primary-color); /* Dark Gray */
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.article-title a:hover {
+    color: var(--accent-color); /* Dark Red */
 }
 
 .article-description {
-    font-size: 0.9em;
-    font-style: italic;
-    color: var(--text-color); /* Ensure the text is black */
+    font-size: 1em;
+    color: var(--secondary-color); /* Gray */
     margin-top: 10px;
+    text-align: left;
+    line-height: 1.5;
 }
 
 .form-group {
@@ -216,11 +230,11 @@ h2 {
 
 .form-group label {
     font-weight: bold;
-    color: var(--text-color); /* Ensure the text is black */
+    color: var(--primary-color); /* Dark Gray */
 }
 
 .form-group span {
-    color: var(--text-color); /* Ensure the text is black */
+    color: var(--secondary-color); /* Gray */
 }
 
 /* Liens */
