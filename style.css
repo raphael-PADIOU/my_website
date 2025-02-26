@@ -196,7 +196,7 @@ h2 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start; /* Align items to the start */
     min-height: 250px; /* Set a minimum height for all items */
     overflow: hidden; /* Ensure content doesn't overflow */
     position: relative; /* For positioning child elements */
@@ -211,7 +211,7 @@ h2 {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--primary-color); /* Dark Gray */
-    margin-bottom: 0; /* Removed margin */
+    margin-bottom: 5px; /* Reduced margin */
 }
 
 .article-title a {
@@ -227,7 +227,7 @@ h2 {
 .article-description {
     font-size: 1em;
     color: var(--secondary-color); /* Gray */
-    margin-top: 10px; /* Adjusted margin */
+    margin-top: 5px; /* Reduced margin */
     text-align: left;
     line-height: 1.5;
 }
