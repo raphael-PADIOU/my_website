@@ -7,7 +7,6 @@
     --accent-color: #CC3333; /* Matte Red */
     --header-text-color: #FFFFFF; /* White for header text */
     --neon-color: #CCCCCC; /* Matte White for neon effect */
-    --widget-background-color: #FFFFFF; /* White for connect widgets */
 }
 
 body {
@@ -284,7 +283,7 @@ a:hover {
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    background: var(--widget-background-color); /* White background for connect widgets */
+    background: var(--section-background-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
