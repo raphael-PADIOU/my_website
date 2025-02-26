@@ -66,54 +66,31 @@ body {
 }
 
 header {
-    position: relative;
-    width: 100vw; /* Ensure the header takes the full viewport width */
-    left: 50%;
-    right: 50%;
-    margin-left: -50vw;
-    margin-right: -50vw;
-    background: url('IMG_0033.jpeg') no-repeat center center/cover;
+    background-color: var(--primary-color);
     color: var(--header-text-color);
     padding: 40px 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    border-bottom: 5px solid var(--neon-color); /* Neon border */
-    box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color), 0 0 30px var(--neon-color), 0 0 40px var(--neon-color); /* Neon glow effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
 }
 
 .header-content {
-    position: relative;
-    z-index: 2;
     max-width: 800px;
     margin: 0 auto;
-}
-
-header::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0); /* Removed semi-transparent overlay */
-    z-index: 1;
 }
 
 header h1 {
     margin: 0;
     font-size: 3em;
     font-family: 'Montserrat', sans-serif;
-    color: var(--header-text-color); /* Ensure the text is white */
 }
 
 header p {
     margin: 10px 0;
     font-size: 1.5em;
-    color: var(--header-text-color); /* Ensure the text is white */
 }
 
 header a, .contact-info a, #about a, a {
-    color: var(--text-color);
+    color: var(--header-text-color);
 }
 
 header a:hover, .contact-info a:hover, #about a:hover, a:hover {
@@ -248,13 +225,11 @@ li {
 }
 
 a {
-    color: var(--text-color);
+    color: var(--accent-color);
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 a:hover {
-    color: var(--accent-color);
     text-decoration: underline;
 }
 
@@ -324,12 +299,8 @@ footer {
     background: var(--primary-color);
     color: var(--header-text-color);
     padding: 10px;
-    font-size: 1em;
-    position: fixed;
-    width: 100%;
-    bottom: 0;
-    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.5);
 }
 
 /* Animations */
