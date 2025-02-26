@@ -190,14 +190,14 @@ h2 {
     width: 300px;
     flex: 1;
     background: var(--section-background-color);
-    padding: 20px;
+    padding: 10px; /* Adjusted padding */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Align items to the start */
-    min-height: 150px; /* Reduced minimum height */
+    min-height: auto; /* Removed minimum height */
     overflow: hidden; /* Ensure content doesn't overflow */
     position: relative; /* For positioning child elements */
 }
