@@ -197,7 +197,7 @@ h2 {
     flex-direction: column;
     align-items: center;
     justify-content: flex-start; /* Align items to the start */
-    min-height: 250px; /* Set a minimum height for all items */
+    min-height: 150px; /* Reduced minimum height */
     overflow: hidden; /* Ensure content doesn't overflow */
     position: relative; /* For positioning child elements */
 }
