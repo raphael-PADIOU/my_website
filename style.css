@@ -1,12 +1,12 @@
 :root {
-    --primary-color: #333333; /* Dark Gray */
-    --secondary-color: #666666; /* Gray */
-    --background-color: #000000; /* Black */
-    --section-background-color: #FFFFFF; /* White for sections */
-    --text-color: #000000; /* Black */
-    --accent-color: #fd0003; /* Red */
+    --primary-color: #444444; /* Matte Dark Gray */
+    --secondary-color: #888888; /* Matte Gray */
+    --background-color: #111111; /* Matte Black */
+    --section-background-color: #F5F5F5; /* Matte White */
+    --text-color: #222222; /* Matte Black */
+    --accent-color: #CC3333; /* Matte Red */
     --header-text-color: #FFFFFF; /* White for header text */
-    --neon-color: #FFFFFF; /* White for neon effect */
+    --neon-color: #CCCCCC; /* Matte White for neon effect */
 }
 
 body {
