@@ -114,7 +114,7 @@ header a:hover, .contact-info a:hover, #about a:hover, a:hover {
 #about {
     background: var(--section-background-color);
     padding: 20px;
-    margin: 20px auto;
+    margin: 20px 0; /* Adjusted margin to match other sections */
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     max-width: 800px;
@@ -223,18 +223,7 @@ h2 {
 }
 
 .form-group {
-    display: flex;
-    justify-content: space-between;
-    margin-bottom: 10px;
-}
-
-.form-group label {
-    font-weight: bold;
-    color: var(--primary-color); /* Dark Gray */
-}
-
-.form-group span {
-    color: var(--secondary-color); /* Gray */
+    display: none; /* Hide form-group elements */
 }
 
 /* Liens */
