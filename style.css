@@ -13,6 +13,8 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     font-family: 'Montserrat', sans-serif;
+    margin: 0; /* Ensure no margin around the body */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
 }
 
 .top-bar {
@@ -65,6 +67,11 @@ body {
 
 header {
     position: relative;
+    width: 100vw; /* Ensure the header takes the full viewport width */
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     background: url('IMG_0033.jpeg') no-repeat center center/cover;
     color: var(--header-text-color);
     padding: 40px 20px;
