@@ -2,6 +2,7 @@
     --primary-color: #333333; /* Dark Gray */
     --secondary-color: #666666; /* Gray */
     --background-color: #000000; /* Black */
+    --section-background-color: #FFFFFF; /* White for sections */
     --text-color: #FFFFFF; /* White */
     --accent-color: #990000; /* Dark Red */
 }
@@ -21,12 +22,31 @@ body {
     text-align: center;
     font-size: 1.1em;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.menu-icon {
+    cursor: pointer;
+    font-size: 1.5em;
 }
 
 .menu {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    position: absolute;
+    top: 50px;
+    right: 20px;
+    background-color: var(--primary-color);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.menu.show {
     display: flex;
-    gap: 20px;
 }
 
 .menu-item {
@@ -43,7 +63,7 @@ body {
 
 header {
     position: relative;
-    background: url('a75e2ebb01a77167846014fe06eff8a8.jpg') no-repeat center center/cover;
+    background: url('IMG_0033.jpeg') no-repeat center center/cover;
     color: var(--text-color);
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -82,7 +102,7 @@ header p {
 }
 
 header a, .contact-info a, #about a, a {
-    color: var(--secondary-color);
+    color: var(--text-color);
 }
 
 header a:hover, .contact-info a:hover, #about a:hover, a:hover {
@@ -91,7 +111,7 @@ header a:hover, .contact-info a:hover, #about a:hover, a:hover {
 
 /* Section About */
 #about {
-    background: var(--background-color);
+    background: var(--section-background-color);
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
@@ -109,11 +129,11 @@ header a:hover, .contact-info a:hover, #about a:hover, a:hover {
 #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 #about a {
-    color: var(--secondary-color);
+    color: var(--accent-color);
     text-decoration: none;
 }
 
@@ -131,7 +151,7 @@ main {
 
 /* Sections Articles & Projets */
 section {
-    background: var(--background-color);
+    background: var(--section-background-color);
     padding: 20px;
     margin: 20px 0;
     border-radius: 10px;
@@ -158,7 +178,7 @@ h2 {
     transition: transform 0.3s, box-shadow 0.3s;
     width: 300px;
     flex: 1;
-    background: var(--background-color);
+    background: var(--section-background-color);
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -177,13 +197,13 @@ h2 {
 .article-title {
     font-size: 1.2em;
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .article-description {
     font-size: 0.9em;
     font-style: italic;
-    color: #666;
+    color: var(--primary-color);
     margin-top: 10px;
 }
 
@@ -195,11 +215,11 @@ h2 {
 
 .form-group label {
     font-weight: bold;
-    color: var(--secondary-color);
+    color: var(--primary-color);
 }
 
 .form-group span {
-    color: var(--text-color);
+    color: var(--primary-color);
 }
 
 /* Liens */
@@ -214,7 +234,7 @@ li {
 }
 
 a {
-    color: var(--secondary-color);
+    color: var(--text-color);
     text-decoration: none;
     transition: color 0.3s;
 }
@@ -226,7 +246,7 @@ a:hover {
 
 /* Connect Section */
 #connect {
-    background: var(--background-color);
+    background: var(--section-background-color);
     padding: 20px;
     margin: 20px auto;
     border-radius: 10px;
@@ -249,7 +269,7 @@ a:hover {
     gap: 10px;
     padding: 10px;
     border-radius: 10px;
-    background: var(--background-color);
+    background: var(--section-background-color);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     transition: transform 0.3s, box-shadow 0.3s;
 }
@@ -277,7 +297,7 @@ a:hover {
 
 .connect-item a {
     text-decoration: none;
-    color: var(--secondary-color);
+    color: var(--text-color);
     font-size: 1.1em;
 }
 

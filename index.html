@@ -10,7 +10,10 @@
 <body>
     <header>
         <div class="top-bar">
-            <nav class="menu">
+            <div class="menu-icon" id="menu-icon">
+                &#9776; <!-- Unicode for the three bars symbol -->
+            </div>
+            <nav class="menu" id="menu">
                 <a href="#about" class="menu-item">About Me</a>
                 <a href="#articles" class="menu-item">Articles</a>
                 <a href="#projects" class="menu-item">Projects</a>
@@ -93,5 +96,11 @@
     <footer>
         <p>© 2025 - Raphaël PADIOU</p>
     </footer>
+
+    <script>
+        document.getElementById('menu-icon').addEventListener('click', function() {
+            document.getElementById('menu').classList.toggle('show');
+        });
+    </script>
 </body>
 </html>
