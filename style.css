@@ -6,6 +6,7 @@
     --text-color: #000000; /* Black */
     --accent-color: #fd0003; /* Red */
     --header-text-color: #FFFFFF; /* White for header text */
+    --neon-color: #FFFFFF; /* White for neon effect */
 }
 
 body {
@@ -69,6 +70,8 @@ header {
     padding: 40px 20px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
+    border-bottom: 5px solid var(--neon-color); /* Neon border */
+    box-shadow: 0 0 10px var(--neon-color), 0 0 20px var(--neon-color), 0 0 30px var(--neon-color), 0 0 40px var(--neon-color); /* Neon glow effect */
 }
 
 .header-content {
@@ -201,7 +204,7 @@ h2 {
     font-size: 1.5em;
     font-weight: bold;
     color: var(--primary-color); /* Dark Gray */
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduced margin */
 }
 
 .article-title a {
@@ -217,7 +220,7 @@ h2 {
 .article-description {
     font-size: 1em;
     color: var(--secondary-color); /* Gray */
-    margin-top: 10px;
+    margin-top: 5px; /* Reduced margin */
     text-align: left;
     line-height: 1.5;
 }
