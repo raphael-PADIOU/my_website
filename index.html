@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="css/style.css">
     <meta name="google" content="notranslate">
     <title>Raphaël PADIOU | Portfolio</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/p5.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.topology.min.js"></script>
 </head>
 <body>
     <div class="nav-background"></div>
@@ -26,13 +28,9 @@
 
     <!-- Home Section with Image and Introduction -->
     <section id="home" class="home">
-        <div class="home-img">
-            <!-- Profile Picture -->
-            <!-- <img src="img/img1.jpg" alt="Profile Image" class="profile-pic"> -->
-        </div>
+        <div id="vanta-bg"></div>
         <div class="home-content">
             <h1>Hi, I'm <span>Raphaël</span></h1>
-            <!-- <h3 class="typing-text">I'm a <span></span></h3> -->
             <p>Crypto Enthusiast | Student @ <a href="https://www.telecom-paris.fr/" class="telecom-link">Télécom Paris</a></p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/rapha%C3%ABl-padiou-726a6b272/"><i class="fa-brands fa-linkedin"></i></a>
@@ -105,5 +103,19 @@
             </div>
         </div>
     </section>
+    <script>
+        VANTA.TOPOLOGY({
+            el: "#vanta-bg",
+            mouseControls: true,
+            touchControls: true,
+            gyroControls: false,
+            minHeight: 200.00,
+            minWidth: 200.00,
+            scale: 1.00,
+            scaleMobile: 1.00,
+            color: 0xe00018,
+            backgroundColor: 0x0
+        })
+    </script>
 </body>
 </html>
