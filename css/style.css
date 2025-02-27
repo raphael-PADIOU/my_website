@@ -23,7 +23,7 @@ body {
 }
 
 #vanta-bg {
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -151,43 +151,68 @@ section {
     padding: 5rem 9%;
 }
 
-.home {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    background-color: transparent; /* Same as nav-background */
-    height: 100vh; /* Ensure it takes full height */
-    text-align: center;
+/* Supprimer le padding supérieur de la première section de contenu */
+section.content-section:first-of-type {
+    padding-top: 0;
 }
 
+/* Ajuster le padding de la section Home */
+section#home {
+    padding: 0 !important;
+}
+
+/* Modifier les règles existantes du .home-content */
 .home-content {
     position: relative;
-    z-index: 1; /* Ensure the content is above the background */
-    width: 80%; /* Largeur fixe, ajustez selon vos besoins */
-    max-width: 800px; /* Largeur maximale pour les grands écrans */
-    margin: 1cm auto; /* Centrer horizontalement et ajouter une marge supérieure */
+    z-index: 1;
+    width: 80%;
+    max-width: 800px;
+    margin: 0 auto; /* Remplacer la marge de 1cm */
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
-    height: calc(100vh - 80px); /* Hauteur de la vue moins la hauteur de nav-background */
+    min-height: 100vh; /* Remplacer calc(100vh - 80px) */
+    padding: 80px 9% 0; /* Ajouter un padding en haut pour compenser la navbar */
 }
 
-/* Forcer le texte à rester sur une seule ligne */
-.home-content p {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-}
-
+/* Augmenter la taille du texte */
 .home-content h1 {
-    font-size: 4vw; /* Ajustez selon vos besoins */
+    font-size: 6rem;
+    white-space: nowrap; /* Empêche le retour à la ligne */
+    margin-bottom: 2rem; /* Ajouter une marge inférieure */
 }
 
 .home-content p {
-    font-size: 2vw; /* Ajustez selon vos besoins */
+    font-size: 3rem; /* Augmenter la taille de la police par un facteur de 2 */
+    margin-bottom: 3rem; /* Ajouter une marge inférieure */
+    white-space: nowrap; /* Empêche le retour à la ligne */
+}
+
+/* Supprimer la contrainte de white-space */
+.home-content p {
+    /* Supprimer white-space: nowrap */
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Ajouter une media query pour les petits écrans */
+@media (max-width: 768px) {
+    .home-content h1 {
+        font-size: 3rem; /* Taille fixe pour mobile */
+    }
+    
+    .home-content p {
+        font-size: 1.6rem; /* Taille fixe pour mobile */
+        white-space: normal; /* Autoriser le retour à la ligne */
+    }
+}
+
+/* S'assurer que la section home remplit toujours l'écran */
+.home {
+    min-height: 100vh;
+    height: auto;
 }
 
 .home-content .btn {
@@ -288,12 +313,14 @@ section {
 }
 
 .content-section {
-    background-color: #1e1e1e; /* Slightly lighter black for better contrast */
+    padding-top: 0; /* Supprimer le padding supérieur */
+    background: rgba(0, 0, 0, 0.8); /* Noir transparent */
     color: #e0e0e0;
     padding: 5rem 9%;
+    margin-top: 0; /* Supprimer la marge supérieure */
     margin-bottom: 2rem;
     border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); /* Ajoute de l'ombre aux bords */
 }
 
 .content-section .content {
@@ -310,7 +337,7 @@ section {
 
 .content-section p {
     font-size: 1.6rem;
-    color: #d3d3d3; /* Light grey for better readability */
+    color: #d3d3d3; /* Gris clair pour une meilleure lisibilité */
 }
 
 .article-container {
