@@ -3,59 +3,119 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Raphaël PADIOU</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Portfolio Website</title>
 </head>
 <body>
+    <div class="nav-background"></div>
     <header>
-        <div class="container">
-            <h1>Raphaël PADIOU</h1>
-            <p>Index of my Crypto Projects & Explorations</p>
-        </div>
+        <a href="#" class="logo">Raphaël's Portfolio</a>
+        <nav>
+            <a href="#home" class="active"> Home</a>
+            <a href="#it-projects">IT Projects</a>
+            <a href="#research">Research</a>
+            <a href="#lecture-notes">Lecture Notes</a>
+            <a href="#education">Education</a>
+        </nav>
     </header>
-
-    <main>
-        <section id="about" class="container">
-            <h2>About Me</h2>
-            <p>I am 20 years old and currently studying <strong>Computer Science</strong> and <strong>Mathematics</strong> at
-                <a href="https://www.telecom-paris.fr/" target="_blank"><strong>Télécom Paris</strong></a>.  
-                I have a strong interest for the <strong>Crypto Ecosystem</strong>, especially 
-                <strong>Cryptography</strong> and <strong>Blockchain Technology</strong>.
-            </p>
-        </section>
-
-        <section id="articles" class="container">
-            <h2>Research and Lecture notes</h2>
-            <article>
-                <h3><a href="Intro_Consensus_Blockchain.pdf" target="_blank">Principes et Mécanismes des Protocoles de Consensus dans les Blockchains (FR)</a></h3>
-                <p>This document (written in French) explains the principles and mechanisms of consensus protocols in blockchain technology. 
-                It covers key models such as Proof of Work (PoW) and Proof of Stake (PoS), with insights into their security and real-world applications.</p>
-            </article>
-        </section>
-
-        <section id="projects" class="container">
-            <h2>Projects</h2>
-            <ul>
-                <!-- <li><a href="https://github.com/mon-projet-1" target="_blank">Project 1 Name</a></li> -->
-            </ul>
-        </section>
-
-        <section id="connect" class="container">
-            <h2>Connect with Me</h2>
-            <ul>
-                <li><a href="https://github.com/raphael-PADIOU" target="_blank">GitHub Profile</a></li>
-                <li><a href="https://www.linkedin.com/in/rapha%C3%ABl-padiou-726a6b272/" target="_blank">LinkedIn Profile</a></li>
-                <li><a href="mailto:padiouraphael@gmail.com">padiouraphael@gmail.com</a></li>
-                <li><a href="mailto:raphael.padiou@telecom-paris.fr">raphael.padiou@telecom-paris.fr</a></li>
-            </ul>
-        </section>
-    </main>
-
-    <footer>
-        <div class="container">
-            <p>© 2025 - Raphaël PADIOU</p>
+    <section id="home" class="home">
+        <div class="home-img">
+            <img src="img/img1.jpg" alt="Profile Image">
         </div>
-    </footer>
+        <div class="home-content">
+            <h1>Hi, It's <span>Raphaël</span></h1>
+            <h3 class="typing-text">I'm a <span></span></h3>
+            <p>I am 20 years old and currently studying Computer Science and Mathematics at <a href="https://www.telecom-paris.fr/" style="font-weight: bold; color: white;">Télécom Paris</a>. I have a strong interest for the Crypto Ecosystem, especially <span style="font-weight: bold; color: white;">Cryptography</span> and <span style="font-weight: bold; color: white;">Blockchain Technology</span>.</p>
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/rapha%C3%ABl-padiou-726a6b272/"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://github.com/raphael-PADIOU"><i class="fa-brands fa-github"></i></a>
+                <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+            <a href="mailto:padiouraphael@gmail.com" class="btn">Contact me</a>
+        </div>
+    </section>
+    <div class="transition"></div>
+    <section id="it-projects" class="content-section">
+        <div class="content">
+            <h2>IT Projects</h2>
+            <div class="article-container">
+                <!--
+                                <div class="article">
+                                    <h3 class="article-title">Project Title</h3>
+                                    <a href="#" class="article-link">Download/Visit</a>
+                                    <p class="article-description">This is a brief description of the project.</p>
+                                </div>
+                                <div class="article">
+                                    <h3 class="article-title">Project Title</h3>
+                                    <a href="#" class="article-link">Download/Visit</a>
+                                    <p class="article-description">This is a brief description of the project.</p>
+                                </div>
+                -->
+            </div>
+        </div>
+    </section>
+    <section id="research" class="content-section">
+        <div class="content">
+            <h2>Research</h2>
+            <div class="article-container">
+                <!--
+                <div class="article">
+                    <h3 class="article-title">Research Title</h3>
+                    <a href="#" class="article-link">Download/Visit</a>
+                    <p class="article-description">This is a brief description of the research.</p>
+                </div>
+                <div class="article">
+                    <h3 class="article-title">Research Title</h3>
+                    <a href="#" class="article-link">Download/Visit</a>
+                    <p class="article-description">This is a brief description of the research.</p>
+                </div>
+                -->
+            </div>
+        </div>
+    </section>
+    <section id="lecture-notes" class="content-section">
+        <div class="content">
+            <h2>Lecture Notes</h2>
+            <div class="article-container">
+                <div class="article">
+                    <h3 class="article-title">Principes et Mécanismes des Protocoles de Consensus dans les Blockchains (Authored)(FR)</h3>
+                    <a href="data/Intro_Consensus_Blockchain.pdf" class="article-link">Access PDF</a>
+                    <p class="article-description">This document (written in French) explains the principles and mechanisms of consensus protocols in blockchain technology. It covers key models such as Proof of Work (PoW) and Proof of Stake (PoS), with insights into their security and real-world applications.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="education" class="content-section">
+        <div class="content">
+            <h2>Education</h2>
+            <div class="article-container">
+                <div class="article">
+                    <h3 class="article-title">Academic Journey</h3>
+                    <a href="#" class="article-link">View PDF</a>
+                    <p class="article-description">An overview of my educational background and academic experiences.</p>
+                    <ul class="academic-list">
+                        <li><strong>Lycée La Flèche (2019-2022)</strong>
+                            <ul>
+                                <li>Terminale: Specialization in Mathematics & Physics, Advanced Mathematics</li>
+                                <li>Baccalauréat with High Honors</li>
+                            </ul>
+                        </li>
+                        <li><strong>Preparatory Classes (CPGE) – PCSI/PC (2022-2024)</strong>
+                            <ul>
+                                <li>Lycée Clemenceau – Focus on Mathematics & Physics, Chemistry Option</li>
+                            </ul>
+                        </li>
+                        <li><strong>Engineering Program at Télécom Paris (2024 - Present)</strong>
+                            <ul>
+                                <li>First-year student specializing in Computer Science</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
