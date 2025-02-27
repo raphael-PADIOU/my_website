@@ -5,12 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
-    <title>Portfolio Website</title>
+    <title>Raphaël PADIOU | Portfolio</title>
 </head>
 <body>
     <div class="nav-background"></div>
     <header>
-        <a href="#" class="logo">Raphaël's Portfolio</a>
+        <div class="logo-container">
+            <img src="img/img1.jpg" alt="Profile Image" class="profile-pic">
+            <a href="mailto:padiouraphael@gmail.com" class="logo">padiouraphael@gmail.com</a>
+        </div>
         <nav>
             <a href="#home" class="active"> Home</a>
             <a href="#it-projects">IT Projects</a>
@@ -19,62 +22,43 @@
             <a href="#education">Education</a>
         </nav>
     </header>
+
+    <!-- Home Section with Image and Introduction -->
     <section id="home" class="home">
         <div class="home-img">
-            <img src="img/img1.jpg" alt="Profile Image">
+            <!-- Profile Picture -->
+            <!-- <img src="img/img1.jpg" alt="Profile Image" class="profile-pic"> -->
         </div>
         <div class="home-content">
-            <h1>Hi, It's <span>Raphaël</span></h1>
-            <h3 class="typing-text">I'm a <span></span></h3>
-            <p>I am 20 years old and currently studying Computer Science and Mathematics at <a href="https://www.telecom-paris.fr/" style="font-weight: bold; color: white;">Télécom Paris</a>. I have a strong interest for the Crypto Ecosystem, especially <span style="font-weight: bold; color: white;">Cryptography</span> and <span style="font-weight: bold; color: white;">Blockchain Technology</span>.</p>
+            <h1>Hi, I'm <span>Raphaël</span></h1>
+            <!-- <h3 class="typing-text">I'm a <span></span></h3> -->
+            <p>Crypto Enthusiast | Student @ <a href="https://www.telecom-paris.fr/" class="telecom-link">Télécom Paris</a></p>
             <div class="social-icons">
                 <a href="https://www.linkedin.com/in/rapha%C3%ABl-padiou-726a6b272/"><i class="fa-brands fa-linkedin"></i></a>
                 <a href="https://github.com/raphael-PADIOU"><i class="fa-brands fa-github"></i></a>
-                <!-- <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a> -->
             </div>
-            <a href="mailto:padiouraphael@gmail.com" class="btn">Contact me</a>
         </div>
     </section>
+
     <div class="transition"></div>
     <section id="it-projects" class="content-section">
         <div class="content">
             <h2>IT Projects</h2>
             <div class="article-container">
-                <!--
-                                <div class="article">
-                                    <h3 class="article-title">Project Title</h3>
-                                    <a href="#" class="article-link">Download/Visit</a>
-                                    <p class="article-description">This is a brief description of the project.</p>
-                                </div>
-                                <div class="article">
-                                    <h3 class="article-title">Project Title</h3>
-                                    <a href="#" class="article-link">Download/Visit</a>
-                                    <p class="article-description">This is a brief description of the project.</p>
-                                </div>
-                -->
+                <!-- Articles can be added here -->
             </div>
         </div>
     </section>
+
     <section id="research" class="content-section">
         <div class="content">
             <h2>Research</h2>
             <div class="article-container">
-                <!--
-                <div class="article">
-                    <h3 class="article-title">Research Title</h3>
-                    <a href="#" class="article-link">Download/Visit</a>
-                    <p class="article-description">This is a brief description of the research.</p>
-                </div>
-                <div class="article">
-                    <h3 class="article-title">Research Title</h3>
-                    <a href="#" class="article-link">Download/Visit</a>
-                    <p class="article-description">This is a brief description of the research.</p>
-                </div>
-                -->
+                <!-- Research articles can be added here -->
             </div>
         </div>
     </section>
+
     <section id="lecture-notes" class="content-section">
         <div class="content">
             <h2>Lecture Notes</h2>
@@ -82,11 +66,12 @@
                 <div class="article">
                     <h3 class="article-title">Principes et Mécanismes des Protocoles de Consensus dans les Blockchains (Authored)(FR)</h3>
                     <a href="data/Intro_Consensus_Blockchain.pdf" class="article-link">Access PDF</a>
-                    <p class="article-description">This document (written in French) explains the principles and mechanisms of consensus protocols in blockchain technology. It covers key models such as Proof of Work (PoW) and Proof of Stake (PoS), with insights into their security and real-world applications.</p>
+                    <p class="article-description">This document (written in French) explains the principles and mechanisms of <strong>Consensus</strong> protocols in <strong>Blockchain</strong> <strong>Technology</strong>. It covers key models such as <strong>Proof of Work</strong> (PoW) and <strong>Proof of Stake</strong> (PoS), with insights into their security and real-world applications.</p>
                 </div>
             </div>
         </div>
     </section>
+
     <section id="education" class="content-section">
         <div class="content">
             <h2>Education</h2>
@@ -95,15 +80,17 @@
                     <h3 class="article-title">Academic Journey</h3>
                     <p class="article-description">An overview of my educational background and academic experiences.</p>
                     <ul class="academic-list">
-                        <li><strong>Lycée La Flèche (2019-2022)</strong>
+                        <li><strong>Lycée (2019-2022)</strong>
                             <ul>
+                                <li>Lycée Estournelles de Constant – La Flèche</li>
                                 <li>Terminale: Specialization in Mathematics & Physics, Advanced Mathematics</li>
                                 <li>Baccalauréat with High Honors</li>
                             </ul>
                         </li>
                         <li><strong>Preparatory Classes (CPGE) – PCSI/PC* (2022-2024)</strong>
                             <ul>
-                                <li>Lycée Clemenceau – Focus on Mathematics & Physics, Chemistry Option</li>
+                                <li>Lycée Clemenceau – Nantes</li>
+                                <li>Focus on Mathematics & Physics, Chemistry Option</li>
                             </ul>
                         </li>
                         <li><strong>Engineering Program at Télécom Paris (2024 - Present)</strong>

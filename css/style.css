@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
-*{
+
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -8,26 +9,34 @@
     outline: none;
     font-family: 'Poppins', sans-serif;
 }
-html{
+
+html {
     font-size: 62.5%;
 }
-body{
+
+body {
     width: 100%;
     height: 100vh;
-    overflow-x: hidden;
-    background-color: #121212; /* Darker background for better contrast */
+    background-color: black; /* Same as nav-background */
     color: white;
+    margin: 0; /* Ensure no margin */
 }
+
 .nav-background {
     width: 100%;
-    height: 80px; /* Increased height */
-    background-color: rgba(0, 0, 0, 0.7); /* Darker black, more opaque */
+    height: 80px; /* Hauteur fixe */
+    background-color: black; /* Couleur de fond */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 98;
+    display: block;
+    overflow: hidden; /* Empêche le contenu de déborder */
+    box-shadow: none; /* Supprimer toute ombre */
+    border-bottom: none; /* Supprimer toute bordure */
 }
-header{
+
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -40,17 +49,35 @@ header{
     z-index: 100;
     height: 80px; /* Match the height of the nav-background */
 }
-.logo{
-    font-size: 3rem;
+
+/* Style pour la conteneur de logo */
+.logo-container {
+    display: flex;
+    align-items: center;
+}
+
+/* Style pour l'image de profil */
+.profile-pic {
+    width: 40px; /* Taille de l'image */
+    height: 40px; /* Taille de l'image */
+    border-radius: 50%; /* Cercle */
+    margin-right: 10px; /* Espace entre l'image et le texte */
+    border: 2px solid white; /* Bordure blanche */
+}
+
+.logo {
+    font-size: 1.8rem;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.logo:hover {
     color: #e00018;
-    font-weight: 800;
-    cursor: pointer;
-    transition: 0.5s ease;
 }
-.logo:hover{
-    transform: scale(1.1);
-}
-nav a{
+
+nav a {
     font-size: 1.8rem;
     color: white;
     margin-left: 4rem;
@@ -58,13 +85,15 @@ nav a{
     transition: 0.3s ease;
     border-bottom: 3px solid transparent;
 }
+
 nav a:hover,
-nav a.active{
+nav a.active {
     color: #e00018;
     border-bottom: 3px solid #e00018;
 }
-@media(max-width:995px){
-    nav{
+
+@media (max-width: 995px) {
+    nav {
         position: absolute;
         display: none;
         top: 0;
@@ -74,67 +103,108 @@ nav a.active{
         border-bottom: 3px solid #e00018;
         border-bottom-left-radius: 2rem;
         padding: 1rem solid;
-        background-color: #161616;
-        border-top: 0.1rem solid rgba(0,0,0,0.1);
+        background-color: black;
+        border-top: 0.1rem solid black;
     }
-    nav.active{
+
+    nav.active {
         display: block;
     }
-    nav a{
+
+    nav a {
         display: block;
         font-size: 2rem;
         margin: 3rem 0;
     }
+
     nav a:hover,
-    nav a.active{
+    nav a.active {
         padding: 1rem;
         border-radius: 0.5rem;
         border-bottom: 0.5rem solid #e00018;
     }
 }
-section{
+
+@media (max-width: 1200px) {
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    nav {
+        display: none;
+    }
+}
+
+section {
     padding: 5rem 9%;
 }
-.home{
+
+.home {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 8rem;
-    background-color: black;
+    flex-direction: column;
+    background-color: black; /* Same as nav-background */
+    height: 100vh; /* Ensure it takes full height */
+    text-align: center;
 }
-.home .home-content h1{
-    font-size: 6rem;
-    font-weight: 700;
-    line-height: 1.3;
+
+.home-content {
+    width: 80%; /* Largeur fixe, ajustez selon vos besoins */
+    max-width: 800px; /* Largeur maximale pour les grands écrans */
+    margin: 1cm auto; /* Centrer horizontalement et ajouter une marge supérieure */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    height: calc(100vh - 80px); /* Hauteur de la vue moins la hauteur de nav-background */
 }
-span{
-    color: #e00018;
+
+/* Forcer le texte à rester sur une seule ligne */
+.home-content p {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-.home-content h3{
-    font-size: 4rem;
-    margin-bottom: 1rem;
-    font-weight: 700;
+
+.home-content h1 {
+    font-size: 4vw; /* Ajustez selon vos besoins */
 }
-.home-content p{
-    font-size: 1.6rem;
-    color: #d3d3d3; /* Light grey for better readability */
+
+.home-content p {
+    font-size: 2vw; /* Ajustez selon vos besoins */
 }
-.home-img{
-    border-radius: 50%;
-}
-.home-img img{
+
+.home-content .btn {
+    margin-top: 2rem; /* Marge supérieure pour espacer des icônes sociales */
+    padding: 1rem 2rem; /* Ajuster le padding pour une meilleure apparence */
+    font-size: 1.6rem; /* Ajuster la taille de la police */
+    text-align: center;
+    display: inline-block;
+    transform: translateX(-50%); /* Décaler le bouton vers la gauche */
     position: relative;
-    width: 25vw; /* Reduced width */
-    border-radius: 50%;
-    box-shadow: 0 0 25px solid #e00018;
-    cursor: pointer;
-    transition: 0.2s linear;
+    left: 50%; /* Positionner le bouton au centre */
 }
-.home-img img:hover{
-    font-size: 1.8rem;
-    font-weight: 500;
+
+.home-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-.social-icons a{
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 1rem; /* Espace entre les icônes */
+    margin-top: 1rem; /* Marge supérieure pour espacer du texte précédent */
+}
+
+.social-icons a {
     display: inline-flex;
     justify-content: center;
     align-items: center;
@@ -148,13 +218,15 @@ span{
     transition: 0.3s ease;
     color: #e00018;
 }
-.social-icons a:hover{
+
+.social-icons a:hover {
     color: black;
     transform: scale(1.3) translateY(-5px);
     background-color: #e00018;
-    box-shadow: 0  0 25px #e00018;
+    box-shadow: 0 0 25px #e00018;
 }
-.btn{
+
+.btn {
     display: inline-block;
     padding: 1rem 2.8rem;
     background-color: black;
@@ -167,74 +239,41 @@ span{
     transition: 0.3s ease;
     cursor: pointer;
 }
-.btn:hover{
+
+.btn:hover {
     transform: scale3d(1.03);
     background-color: #e00018;
-    color: black;
+    color:black;
     box-shadow: 0 0 25px #e00018;
 }
-.typing-text{
-    font-size: 34px;
-    font-weight: 600;
-    min-width: 280px;
-}
-.typing-text span{
-    position: relative;
-}
-.typing-text span::before{
-    content: "software Developer";
-    color: #e00018;
-    animation: words 20s infinite;
-}
-.typing-text span::after{
-    content: "";
-    background-color: black;
-    position: absolute;
-    width: calc(100% + 8px);
-    height: 100%;
-    border-left: 3px solid black;
-    right: -8;
-    animation: cursor 0.6s infinite;
-}
-@keyframes cursor{
-    to{
-        border-left: 3px solid #e00018;
-    }
-}
-@keyframes words{
-    0%, 50%{
-        content: "Computer Science Student.";
-    }
-    51%, 100%{
-        content: "Crypto Ecosystem enthusiast.";
-    }
-}
-@media (max-width: 1000px){
-    .home{
+
+@media (max-width: 1000px) {
+    .home {
         gap: 4rem;
     }
 }
-@media(max-width:995px){
-    .home{
+
+@media (max-width: 995px) {
+    .home {
         flex-direction: column;
         margin: 5rem 4rem;
     }
-    .home .home-content h3{
+
+    .home .home-content h3 {
         font-size: 2.5rem;
     }
-    .home-content h1{
-        font-size: 5rem;
-    }
-    .home-img img{
-        width: 70vw;
-        margin-top: 4rem;
+
+    .home-content h1 {
+        font-size: 3rem;
     }
 }
+
 .transition {
     width: 100%;
     height: 50px;
     background: linear-gradient(to bottom, black, #1e1e1e);
 }
+
 .content-section {
     background-color: #1e1e1e; /* Slightly lighter black for better contrast */
     color: white;
@@ -243,26 +282,31 @@ span{
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
 }
+
 .content-section .content {
     max-width: 80%;
     margin: 0 auto;
 }
+
 .content-section h2 {
     color: #e00018;
     font-size: 4rem;
     font-weight: 700;
     margin-bottom: 1rem;
 }
+
 .content-section p {
     font-size: 1.6rem;
     color: #d3d3d3; /* Light grey for better readability */
 }
+
 .article-container {
     padding: 2rem;
     background-color: #2a2a2a; /* Dark grey background for article container */
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .article {
     margin-bottom: 2rem;
     padding: 1rem;
@@ -270,12 +314,14 @@ span{
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
 }
+
 .article-title {
     color: #e00018;
     font-size: 2.4rem;
     font-weight: 700;
     margin-bottom: 0.5rem;
 }
+
 .article-link {
     color: #e0e0e0; /* Light grey for better readability */
     font-size: 1.6rem;
@@ -283,19 +329,48 @@ span{
     margin-bottom: 0.5rem;
     display: inline-block;
 }
+
 .article-description {
     font-size: 1.6rem;
     color: #e0e0e0; /* Light grey for better readability */
 }
+
 .academic-list {
     font-size: 1.6rem;
     line-height: 1.6;
     padding-left: 2rem;  /* Add space on the left for better alignment */
     margin-top: 2rem;    /* Add top margin to space it out */
 }
+
 .academic-list li {
     margin-bottom: 1rem; /* Add space between list items */
 }
+
 .academic-list ul {
     margin-left: 2rem;  /* Indent nested lists */
+}
+
+/* Style pour le lien "Télécom Paris" */
+.telecom-link {
+    color: inherit; /* Utiliser la même couleur que le texte environnant */
+    text-decoration: none; /* Supprimer la décoration de texte par défaut */
+    font-weight: inherit; /* Utiliser le même poids de police que le texte environnant */
+}
+
+.telecom-link:hover {
+    text-decoration: underline; /* Ajouter une décoration de texte au survol */
+}
+
+/* Style pour l'adresse e-mail cliquable */
+.email-link {
+    font-size: 1.8rem;
+    color: white;
+    margin-left: 2rem;
+    font-weight: 500;
+    transition: 0.3s ease;
+    text-decoration: none;
+}
+
+.email-link:hover {
+    color: #e00018;
 }
