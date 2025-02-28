@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://raphael-padiou.github.io/my_website/sitemap.xml
