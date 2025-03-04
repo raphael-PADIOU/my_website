@@ -277,7 +277,17 @@ section#home {
     transition: 0.3s ease;
     cursor: pointer;
 }
+.cryptohack-icon img {
+    width: 2rem;
+    height: 2rem;
+    filter: invert(100%); /* Convertit l'icône en blanc */
+    transition: transform 0.3s;
+}
 
+.cryptohack-icon img:hover {
+    transform: scale(1.1);
+    filter: invert(0%); /* Convertit l'icône en noir */
+}
 .btn:hover {
     transform: scale3d(1.03);
     background-color: #e00018;
